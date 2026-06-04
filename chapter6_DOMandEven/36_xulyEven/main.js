@@ -42,3 +42,24 @@ backColor.addEventListener("click", () => {
     mytext.style.color = "black"
     mytext.style.backgroundColor = "white"
 })
+
+const submit = document.getElementById("submit")
+const input = document.getElementById("name")
+
+const pri = document.getElementById("previ")
+const previName = localStorage.getItem("long")
+
+if (previName) {
+    pri.innerHTML = `<b>${previName}</b>`
+}
+
+submit.addEventListener("click", () => {
+    // alert("click me")
+    // console.log(input.value)
+
+    localStorage.setItem("test", "hello");
+    console.log(localStorage.getItem("test"));
+
+    localStorage.setItem("long", input.value);
+    document.getElementById("metss").innerHTML = `<b>${input.value}</b>`
+})
