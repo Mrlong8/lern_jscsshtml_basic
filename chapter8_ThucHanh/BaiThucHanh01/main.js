@@ -22,8 +22,11 @@ if (btnSave) {
 
         if (users) {
             const currentUsers = JSON.parse(users)
+            // Chuyển JSON về Array
+
             currentUsers.push(user)
             localStorage.setItem("users", JSON.stringify(currentUsers));
+            // Biến array thành chuỗi JSON.
         } else {
             localStorage.setItem("users", JSON.stringify([user]));
         }
